@@ -5,6 +5,9 @@ const express = require('express');
 // creating router
 const router = express.Router();
 
+// feedback's model (database)
+const Feedback = require('../models/feedback');
+
 // passport for authentication
 const passport = require('passport');
 

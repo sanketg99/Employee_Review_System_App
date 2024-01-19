@@ -2,6 +2,9 @@
 // express
 const express = require('express');
 
+// feedback's model (database)
+const Feedback = require('../models/feedback');
+
 // create new router
 const router = express.Router();
 
