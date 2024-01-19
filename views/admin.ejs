@@ -9,12 +9,12 @@
     </div>
     <hr>
     <!-- heading -->
-    <h1 class="mx-auto text-center" style="color: #176B87;">All Employees</h1>
+    <h1 class="mx-auto text-center" style="color: #0f0f0f;">All Employees</h1>
     <!-- list of all the employee -->
     <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
       <% for (user of employee) {%>
         <!-- single employee card -->
-      <div class="card shadow m-2" style="background-color: #D2E0FB; width: 18rem">
+      <div class="card shadow m-2" style="background-color: #ecebeb; width: 18rem">
         <div class="card-body">
           <!-- image -->
           <img
@@ -32,7 +32,7 @@
             <a
               href=""
               class="btn mb-1 my-1 shadow text-white"
-              style="width: 100%; background-color: #FF9B82;"
+              style="width: 100%; background-color: #03d553;"
               data-bs-toggle="modal"
               data-bs-target="#user<%= user.id %>"
               data-bs-whatever="@mdo"
