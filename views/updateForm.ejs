@@ -7,11 +7,11 @@
       action="/dashboard/admin/update/?id=<%= employee._id %>"
       method="POST"
       class="w-100 h-100 p-2 mt-4 shadow rounded fw-semibold"
-      style="background-color: #cceeff;"
+      style="background-color: rgb(235, 238, 239);"
     >
         <!-- heading -->
       <div class="text-center">
-        <h1 style="color: #176B87;">Update Employee</h1>
+        <h1 style="color: #050505;">Update Employee</h1>
       </div>
       <div class="mb-3">
         <!-- for usre's name -->
@@ -59,7 +59,7 @@
   <!-- for showing feedback given to employee by other fellow employees -->
   <div class="col-12 col-md-5">
     <!-- heading -->
-    <h2 class="text-center my-2">Feedbacks by others for Employee</h2>
+    <h2 class="text-center my-2">Feedbacks given for Employee</h2>
 
     <!-- list of feedbacks -->
     <div
@@ -67,11 +67,11 @@
     >
       <% for( j of feedbacks ) { %>
 
-      <div class="card w-100 m-2" style="background-color: #DAF5FF;">
+      <div class="card w-100 m-2" style="background-color: #c4c9ca;">
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p class="fw-semibold"><%= j.comment %></p>
-            <footer class="blockquote-footer"><%= j.reviewer.name %></footer>
+            <p class="fw-semibold">Comment: <br><%= j.comment %></p>
+            <footer style="color: #262727;">Given by:<br><%= j.reviewer.name %></footer>
           </blockquote>
         </div>
       </div>

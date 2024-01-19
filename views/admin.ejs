@@ -38,13 +38,6 @@
               data-bs-whatever="@mdo"
               ><i class="fa-solid fa-file"></i> Assign review</a
             >
-            <!-- delete button -->
-            <a
-              href="/dashboard/admin/delete/?id=<%= user._id %>"
-              class="btn btn-danger mb-1 shadow"
-              style="width: 48%"
-              ><i class="fa-solid fa-user-minus"></i> Delete</a
-            >
             <!-- edit button -->
             <a
               href="/dashboard/admin/updateForm/?id=<%= user._id %>"
@@ -53,6 +46,14 @@
               ><i class="fa-solid fa-user-pen"></i> Edit</a
             >
   
+            <!-- delete button -->
+            <a
+              href="/dashboard/admin/delete/?id=<%= user._id %>"
+              class="btn btn-danger mb-1 shadow"
+              style="width: 48%"
+              ><i class="fa-solid fa-user-minus"></i> Delete</a
+            >
+            
             <!-- Modal for assigning review -->
             <div
               class="modal fade"
