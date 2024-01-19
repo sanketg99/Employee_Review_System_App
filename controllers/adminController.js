@@ -45,6 +45,7 @@ module.exports.deleteEmployee = async (req,res) => {
         await User.findByIdAndDelete(id);
 
         req.flash('success','Employee successfully deleted');
+        console.log("Employee deleted successfully");
         // redirect to last page
         return res.redirect('back');
     } catch (error) {
@@ -100,6 +101,7 @@ module.exports.updateEmployee = async(req,res) => {
     await User.findByIdAndUpdate(req.query.id, req.body);
 
     req.flash('success','Info Updated !!');
+    console.log("Employee updated successfully");
     // redirect to dashboard
     res.redirect('/dashboard/admin');
 }
@@ -135,6 +137,7 @@ module.exports.addEmployee = async(req,res,next) => {
             if(password !== cnf_password ){
                 
                 req.flash('error','Password does not match !!');
+                console.log("wrong password");
                 // return back
                 return res.redirect('back');
             }
@@ -153,9 +156,11 @@ module.exports.addEmployee = async(req,res,next) => {
             })
 
             req.flash('success','New employee created ');
+            console.log("Employee created successfully");
         }
         else{
             req.flash('error','Email address already exist');
+            console.log("Email existing already");
         }
 
         // return back to dashboard of admin
@@ -179,7 +184,8 @@ module.exports.assignReview = async(req,res) => {
     // if employee found
     // check whether the user already have the recipient in his assign review list
     if(employee.reviewAssigned.includes(req.body.recipient)){
-        req.flash('error','Recipient already assigned to this user');        
+        req.flash('error','Recipient already assigned to this user');   
+        console.log("Recipient already assigned to this user");     
         // return back if recipient already exists
         return res.redirect('back');
     }
@@ -192,6 +198,7 @@ module.exports.assignReview = async(req,res) => {
     await employee.save();
 
     req.flash('success','Review Assigned');
+    console.log("Review Assigned");  
     // redirect back
     res.redirect('back');
 }

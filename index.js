@@ -22,6 +22,9 @@ const session=require('express-session');
 // importing layouts 
 const expressLayouts =  require('express-ejs-layouts');
 
+// importing logger middleware
+const loggerMiddleware = require('./production logs/loggerMiddleware');
+
 // flash messages package and middleware
 const flash = require('connect-flash');
 const myMware=require('./config/middleware');
@@ -36,6 +39,8 @@ const port = process.env.PORT || 3200;
 const app = express();
 
 // middlewares
+// for logs
+app.use(loggerMiddleware);
 
 // for reading json data
 app.use(express.json());

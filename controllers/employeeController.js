@@ -101,6 +101,7 @@ module.exports.addReview = async(req,res) => {
         await reviewerEmployee.save();
 
         req.flash('success','Your feedback is added !!!');
+        console.log("Feedback added successfully");  
         // redirect back 
         return res.redirect('back');
 

@@ -69,6 +69,7 @@ module.exports.createAccount = async (req,res) => {
         if(userExist){
             // redirect to login page
             req.flash('error','User already exists');
+            console.log("User already exists");  
             return res.redirect('/');
         }
 
@@ -79,6 +80,7 @@ module.exports.createAccount = async (req,res) => {
         if(password !== cnf_password ){
             // redirect back
             req.flash('error','Password does not match !!');
+            console.log("Password not matched");  
             return res.redirect('back');
         }
 
@@ -95,6 +97,7 @@ module.exports.createAccount = async (req,res) => {
         })
 
         req.flash('success','New User created, Please login !!');
+        console.log("New user created successfully");  
         // redirect user to login page
         return res.status(201).redirect('/');
 
@@ -110,6 +113,7 @@ module.exports.createSession = (req,res) => {
     const user = req.user;
 
     req.flash('success','Welcome, You are logged in');
+    console.log("User logged in successfully");  
     // render the admin page if logged in user is admin
     if(user.role === 'Admin'){
         return res.redirect('/dashboard/admin');
@@ -131,6 +135,7 @@ module.exports.signout = async (req,res) => {
         }
 
         req.flash('success','You are logged out successfully !!');
+        console.log("User logged out successfully");  
         // redirect to signin page
         res.redirect('/');
     });
