@@ -46,12 +46,10 @@ It is built using NodeJs, ExpressJs, MongoDB, EJS and JavaScript.
 - passport-local
 
 ## 🖼️ Screenshorts
-![signIn page](./assets/image/Sign_In.png)
-![signUp page](./assets/image/Sign_Up.png)
-![Admin home page](./assets/image/Home_page.png)
-![Admin home page](./assets/image/Home_page.png)
-![Admin home page](./assets/image/Home_page.png)
-![Admin home page](./assets/image/Home_page.png)
-![Add Student Page](./assets/image/Add_student.png)
-![company List Home Page](./assets/image/Company_Home_page.png)
-![schedule Interview Page](./assets/image/Schedule_interview.png)
+![signIn page](./assets/image/Login.png)
+![signUp page](./assets/image/Sign_up.png)
+![Admin home page](./assets/image/Admin_home.png)
+![Admin Update Employee](./assets/image/Admin_update_Employee.png)
+![Admin Assign review](./assets/image/Assign_review.png)
+![Employee Add feddback](./assets/image/Employee_AddFeedback.png)
+![Employee Home page](./assets/image/Employee_Home.png)
